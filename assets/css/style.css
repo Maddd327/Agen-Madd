@@ -223,7 +223,18 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   color: rgb(255, 255, 255);
-  background: #63a79c;
+  background-size: 200%;
+  background-color: #63a79c;
+  background-image: linear-gradient(45deg, #2be8c9 30%, #b9ed28 100%);
+  animation: gradient-tab 1s infinite alternate;
+}
+@keyframes gradient-tab {
+  0%{
+    background-position: right;
+  }
+  100%{
+    background-position: left;
+  }
 }
 
 .nav-menu a:hover span,
@@ -311,24 +322,50 @@ h6 {
   display: flex;
   justify-content: center;
   margin: 0;
-  font-size: 64px;
+  font-size: 70px;
   font-weight: 700;
   line-height: 56px;
-  color: #45505b;
+  background-color: #FF3CAC;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 90%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-text 2.5s infinite alternate;
+}
+
+@keyframes gradient-text {
+  0% {
+    background-position: left;
+  }
+
+  100%{
+    background-position: right;
+  }
 }
 
 #hero p {
   display: flex;
   justify-content: center;
-  color: #45505b;
+  color: #4c4b4b;
+  font-weight: 600;
   margin: 15px 0 0 0;
-  font-size: 26px;
+  font-size: 30px;
   font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
+  font: size 100px;
+  font-weight: 600;
   color: #26bd4b ;
   letter-spacing: 1px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #41d0c4 0%, #C850C0 46%, #FFCC70 100%);  
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-text 4s infinite alternate;
 }
 
 #hero .social-links {
@@ -343,11 +380,18 @@ h6 {
   color: #45505b;
   line-height: 1;
   margin-right: 20px;
-  transition: 1.3s;
+ 
 }
 
 #hero .social-links a:hover {
-  color: #00ff80;
+  transition: 1s;
+  background-size: 200%;
+  background-color: #00ff80;
+  background-image: linear-gradient(45deg, #79c5b8 30%, #d6fb70 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-tab 2s infinite alternate;
 }
 
 @media (max-width: 992px) {
@@ -524,7 +568,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #45505b;
+  color: #7b7d7d;
 }
 
 .skills .progress .skill .val {
@@ -533,15 +577,30 @@ section {
 }
 
 .skills .progress-bar-wrap {
-  background: #f2f3f5;
+  background: #f2f5f2;
 }
 
 .skills .progress-bar {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #15e293 ;
+  background-color: #FBDA61;
+  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+  background-size: 200%;
+  animation: gradient-animate 3s infinite alternate;
+
 }
+
+@keyframes gradient-animate {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # riwayat
@@ -872,7 +931,7 @@ section {
 }
 
 .services .icon-box h4 {
-  font-weight: 600;
+  font-weight: 700;
   margin: 10px 0 15px 0;
   font-size: 22px;
 }
@@ -904,7 +963,13 @@ section {
 }
 
 .services .iconbox-blue i {
-  color: #47aeff;
+  color: #72ff47;
+  background-size: 200%;
+  background: linear-gradient(to bottom left, #8a3ab9 21%, #e95950 40%, #fccc63 90%);
+  -webkit-background-clip: text;
+  background-clip:text;
+  color: transparent;
+  animation: gradient-tab 1s infinite alternate;
 }
 
 .services .iconbox-blue:hover .icon i {
@@ -912,7 +977,7 @@ section {
 }
 
 .services .iconbox-blue:hover .icon path {
-  fill: #3f729b;
+  fill: #e95950 ;
 }
 
 .services .iconbox-orange i {
@@ -1070,7 +1135,7 @@ section {
 #footer {
   background: #f7f8f9;
   color: #45505b;
-  font-size: 14px;
+  font-size: 18px;
   text-align: center;
   padding: 30px 0;
 }
@@ -1098,7 +1163,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #0563bb;
+  background: #8aa353;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1107,13 +1172,23 @@ section {
   text-align: center;
   width: 36px;
   height: 36px;
-  transition: 0.3s;
+  transition: 1.3s;
 }
 
 #footer .social-links a:hover {
-  background: #0678e3;
-  color: #fff;
-  text-decoration: none;
+  background-image: linear-gradient(90deg, #8fdadb 0%, #daa3db 100%);
+  background-size: 200%;
+  color: #fff;  
+  animation: gradient-sociallink 3s infinite alternate;
+
+}
+@keyframes gradient-sociallink {
+  0%{
+    background-position: right;
+  }
+  100%{
+    background-position: left;
+  }
 }
 
 #footer .copyright {

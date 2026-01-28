@@ -1,4 +1,3 @@
-
 (function() {
   "use strict";
 
@@ -207,6 +206,42 @@
     selector: '.portfolio-details-lightbox',
     width: '90%',
     height: '90vh'
+  });
+
+  /**
+   * FIX: Stop audio/video supaya tidak numpuk saat GLightbox buka/tutup/pindah
+   */
+  const stopAllMedia = () => {
+    // Pause semua video HTML5 (termasuk yang mungkin dibuat GLightbox)
+    document.querySelectorAll('video').forEach(v => {
+      try {
+        v.pause();
+        v.currentTime = 0;
+        v.muted = true;
+      } catch (e) {}
+    });
+
+    // Matikan semua iframe di dalam glightbox (external: tiktok / halaman lain)
+    document.querySelectorAll('.glightbox-container iframe').forEach(f => {
+      try {
+        const src = f.getAttribute('src');
+        if (src) f.setAttribute('src', '');
+      } catch (e) {}
+    });
+  };
+
+  // Matikan media saat buka / tutup / pindah slide
+  ['open', 'close', 'slide_changed'].forEach(evt => {
+    portfolioLightbox.on(evt, stopAllMedia);
+    portfolioDetailsLightbox.on(evt, stopAllMedia);
+  });
+
+  // Optional: saat membuka details lightbox, unmute video yang sedang tampil
+  portfolioDetailsLightbox.on('open', () => {
+    setTimeout(() => {
+      const v = document.querySelector('.glightbox-container video');
+      if (v) v.muted = false;
+    }, 200);
   });
 
   /**

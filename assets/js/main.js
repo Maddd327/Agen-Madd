@@ -120,13 +120,73 @@
   });
 
   /**
-   * Preloader
+   * Preloader (FIX)
+   * - angka 1% -> 90% -> 100%
+   * - habis 100%: reveal buka dari tengah (class .reveal)
+   * - remove preloader pakai timeout (biar ga nyangkut)
    */
   let preloader = select('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
+    const counterEl = preloader.querySelector('.loader-count');
+    document.body.classList.add('preloading');
+
+    let count = 1;
+    let done = false;
+
+    const setText = () => {
+      if (counterEl) counterEl.textContent = count + '%';
+    };
+    setText();
+
+    const animateCountTo = (target, duration, onDone) => {
+      const start = count;
+      const startTime = performance.now();
+
+      const step = (now) => {
+        const t = Math.min(1, (now - startTime) / duration);
+        const next = Math.floor(start + (target - start) * t);
+
+        if (next > count) count = next;
+        setText();
+
+        if (t < 1) requestAnimationFrame(step);
+        else if (onDone) onDone();
+      };
+
+      requestAnimationFrame(step);
+    };
+
+    // awal: 1 -> 90 pelan
+    animateCountTo(90, 1400);
+
+    const finishPreloader = () => {
+      if (done) return;
+      done = true;
+
+      // lanjut: 90 -> 100
+      animateCountTo(100, 650, () => {
+        preloader.classList.add('reveal');
+        document.body.classList.remove('preloading');
+        document.body.classList.add('loaded-pop');
+
+        // REMOVE preloader setelah animasi panel selesai (tanpa nunggu animationend)
+        window.setTimeout(() => {
+          if (preloader && preloader.parentNode) {
+            preloader.parentNode.removeChild(preloader);
+          }
+        }, 950);
+      });
+    };
+
+    // kalau load sudah kejadian (cache), langsung finish
+    if (document.readyState === 'complete') {
+      finishPreloader();
+    } else {
+      window.addEventListener('load', finishPreloader, { once: true });
+
+      // fallback: kalau load lama/nyangkut, paksa selesai juga
+      window.setTimeout(finishPreloader, 4000);
+    }
   }
 
   /**
@@ -163,14 +223,42 @@
   }
 
   /**
-   * Porfolio isotope and filter
+   * Porfolio isotope and filter (FIX layout rusak karena lazy-load)
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+
+      // FIX: lazy-load bikin isotope salah hitung tinggi
+      portfolioContainer.querySelectorAll('img[loading="lazy"]').forEach(img => {
+        try { img.loading = 'eager'; } catch(e) {}
       });
+
+   let portfolioIsotope = new Isotope(portfolioContainer, {
+  itemSelector: '.portfolio-item',
+  layoutMode: 'masonry',
+  percentPosition: true,
+  masonry: {
+    columnWidth: '.portfolio-item'
+  }
+});
+
+      const relayout = () => {
+        portfolioIsotope.layout();
+        if (window.AOS) AOS.refresh();
+      };
+
+      // relayout tiap gambar selesai load
+      const imgs = portfolioContainer.querySelectorAll('img');
+      imgs.forEach(img => {
+        if (!img.complete) {
+          img.addEventListener('load', relayout, { once: true });
+          img.addEventListener('error', relayout, { once: true });
+        }
+      });
+
+      // jaga-jaga
+      setTimeout(relayout, 200);
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
@@ -185,11 +273,10 @@
           filter: this.getAttribute('data-filter')
         });
         portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
+          relayout();
         });
       }, true);
     }
-
   });
 
   /**
@@ -290,6 +377,57 @@
       mirror: false
     })
   });
+
+  /**
+   * Lightweight 3D tilt (no library)
+   */
+  const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
+
+  const tiltCards = document.querySelectorAll('.tilt-card');
+
+  if (!isTouchDevice()) {
+    tiltCards.forEach(card => {
+      const maxRotate = 10; // derajat
+      const maxTranslate = 6; // px
+
+      const onMove = (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const midX = rect.width / 2;
+        const midY = rect.height / 2;
+
+        const rotateY = ((x - midX) / midX) * maxRotate;
+        const rotateX = -((y - midY) / midY) * maxRotate;
+
+        const translateX = ((x - midX) / midX) * maxTranslate;
+        const translateY = ((y - midY) / midY) * maxTranslate;
+
+        card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateX(${translateX}px) translateY(${translateY}px)`;
+      };
+
+      const onLeave = () => {
+        card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateX(0px) translateY(0px)';
+      };
+
+      card.addEventListener('mousemove', onMove);
+      card.addEventListener('mouseleave', onLeave);
+    });
+  }
+
+  /**
+   * Subtle parallax for About image (mouse)
+   */
+  const parImg = document.querySelector('.parallax-img');
+  if (parImg && !isTouchDevice()) {
+    const strength = 12;
+    window.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * strength;
+      const y = (e.clientY / window.innerHeight - 0.5) * strength;
+      parImg.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  }
 
   /**
    * Initiate Pure Counter 

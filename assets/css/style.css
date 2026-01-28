@@ -1,3 +1,5 @@
+
+
 /**
 * Template Name: MyResume - v4.8.1
 * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -1209,3 +1211,151 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+/* ===== Parallax / 3D Effects (lightweight) ===== */
+
+/* Hero background smooth parallax */
+#hero {
+  background-attachment: fixed;
+}
+
+/* Disable fixed background on mobile (biar ga bug/berat) */
+@media (max-width: 768px) {
+  #hero { background-attachment: scroll; }
+}
+
+/* 3D tilt card base */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.tilt-card .tilt-pop {
+  transform: translateZ(30px);
+}
+
+/* Optional: glow on hover biar nyambung */
+.tilt-card:hover {
+  box-shadow: 0px 18px 45px rgba(0,0,0,.25);
+}
+
+/* About image parallax feel */
+.parallax-img {
+  will-change: transform;
+  transition: transform .12s ease;
+}
+/* ===== Preloader Counter 1-100 ===== */
+#preloader .loader-count{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 46px;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+
+  /* gradient text biar nyambung */
+  background-image: linear-gradient(45deg, #2be8c9 30%, #b9ed28 100%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-tab 1.2s infinite alternate;
+
+  z-index: 10000;
+}
+
+/* Optional: kalau kamu mau spinner-nya hilang, uncomment ini */
+/* #preloader:before{ display:none; } */
+
+/* =========================================================
+   FIX PRELOADER:
+   - Hapus spinner bulat
+   - Transition buka dari tengah (left/right panels)
+   - Aman: override tanpa ubah struktur ori
+========================================================= */
+
+body.preloading {
+  overflow: hidden;
+}
+
+/* pakai overlay panel, bukan background di #preloader */
+#preloader{
+  background: transparent !important;
+}
+
+/* GANTI fungsi :before yang awalnya spinner -> jadi panel kiri */
+#preloader:before{
+  content: "" !important;
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+
+  width: 50vw !important;
+  height: 100vh !important;
+
+  background: #fff !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  animation: none !important;
+  -webkit-animation: none !important;
+
+  z-index: 9999 !important;
+}
+
+/* panel kanan */
+#preloader:after{
+  content: "" !important;
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+
+  width: 50vw !important;
+  height: 100vh !important;
+
+  background: #fff !important;
+  z-index: 9999 !important;
+}
+
+/* angka % tetap di atas panel */
+#preloader .loader-count{
+  z-index: 10000 !important;
+}
+
+/* saat reveal: panel kebuka dari tengah */
+#preloader.reveal{
+  pointer-events: none;
+}
+
+#preloader.reveal:before{
+  animation: preloader-open-left .9s cubic-bezier(.2,.9,.2,1) forwards !important;
+}
+
+#preloader.reveal:after{
+  animation: preloader-open-right .9s cubic-bezier(.2,.9,.2,1) forwards !important;
+}
+
+@keyframes preloader-open-left{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-105%); }
+}
+
+@keyframes preloader-open-right{
+  from { transform: translateX(0); }
+  to   { transform: translateX(105%); }
+}
+
+/* angka % ikut “pop” + hilang */
+#preloader.reveal .loader-count{
+  animation: preloader-count-out .45s ease forwards;
+}
+
+@keyframes preloader-count-out{
+  from { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  to   { opacity: 0; transform: translate(-50%, -50%) scale(1.12); }
+}
+.portfolio .portfolio-container { position: relative; }

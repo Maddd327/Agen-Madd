@@ -5,25 +5,24 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Madd</title>
+  <title>Madd — Creative Portfolio</title>
   <meta name="description" content="Ahmad Farrel — Travel Content Creator, Video Editor, Videographer, and Web Developer. Cinematic storytelling, clean edits, and professional visuals.">
-  <meta name="theme-color" content="#0d6efd">
+  <meta name="theme-color" content="#0b2530">
 
   <!-- Open Graph (share to WhatsApp/IG/FB biar bagus) -->
-  <meta property="og:title" content="Ahmad Farrel | Portfolio">
+  <meta property="og:title" content="Madd — Creative Portfolio">
   <meta property="og:description" content="Cinematic edits, travel storytelling, videography, and web projects.">
   <meta property="og:image" content="aseet/aset project/madd.png">
   <meta property="og:type" content="website">
 
-  <!-- Performance: preconnect fonts -->      
+  <!-- Performance: preconnect fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="aseet/aset project/madd.png" rel="icon">
-  <link href="aseet/Proyek Baru 2 [6BEF1C5].png" rel="apple-touch-icon">
+  <link href="aseet/aset project/madd.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -34,299 +33,363 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- CSS -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css?v=20260716-6" rel="stylesheet">
+  <link href="assets/css/portfolio-enhancements.css?v=20260716-6" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ======= Cinematic name opening ======= -->
+  <div id="opening" class="opening" role="status" aria-label="Opening Ahmad Farrel Creative Visual Portfolio">
+    <div class="opening__background" aria-hidden="true"></div>
+    <div class="opening__grain" aria-hidden="true"></div>
+    <span class="opening__corner opening__corner--tl" aria-hidden="true"></span>
+    <span class="opening__corner opening__corner--tr" aria-hidden="true"></span>
+    <span class="opening__corner opening__corner--bl" aria-hidden="true"></span>
+    <span class="opening__corner opening__corner--br" aria-hidden="true"></span>
+    <div class="opening__content">
+      <span class="opening__label">MADD / OPENING 001</span>
+      <p class="opening__name" aria-hidden="true"><span class="opening-word opening-word--first">AHMAD</span><span class="opening-word opening-word--second">FARREL</span></p>
+      <p class="opening__subtitle">CREATIVE VISUAL PORTFOLIO</p>
+      <span class="opening__line" aria-hidden="true"></span>
+    </div>
+  </div>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
+  <a class="portfolio-skip-link" href="#main">Skip to main content</a>
 
-    <nav id="navbar" class="navbar nav-menu">
+  <!-- ======= Cinematic navigation rail ======= -->
+  <header id="header" class="madd-nav-rail" aria-label="Portfolio navigation">
+    <a class="madd-nav-rail__brand scrollto" href="#hero" aria-label="MADD — back to Home">
+      <span class="madd-nav-rail__brand-long">MADD.</span>
+      <span class="madd-nav-rail__brand-short" aria-hidden="true">M.</span>
+    </a>
+    <span class="madd-nav-rail__progress" aria-hidden="true"><span data-scroll-progress></span></span>
+    <nav id="navbar" class="navbar nav-menu" aria-label="Primary">
       <ul>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About Me</span></a></li>
-        <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-stats"></i> <span>Skills</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Work & Portfolio</span></a></li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bxs-contact"></i> <span>Contact</span></a></li>
-        <li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-group"></i> <span>Partners</span></a></li>
+        <li><a href="#hero" class="nav-link scrollto active" data-nav-link aria-label="Home" aria-current="location"><i class="bx bx-home-alt" aria-hidden="true"></i><span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto" data-nav-link aria-label="About"><i class="bx bx-user" aria-hidden="true"></i><span>About</span></a></li>
+        <li><a href="#skills" class="nav-link scrollto" data-nav-link aria-label="Skills"><i class="bx bx-grid-alt" aria-hidden="true"></i><span>Skills</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto" data-nav-link aria-label="Resume"><i class="bx bx-file-blank" aria-hidden="true"></i><span>Resume</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto" data-nav-link aria-label="Portfolio"><i class="bx bx-movie-play" aria-hidden="true"></i><span>Portfolio</span></a></li>
+        <li><a href="#services" class="nav-link scrollto" data-nav-link aria-label="Contact"><i class="bx bx-message-square-dots" aria-hidden="true"></i><span>Contact</span></a></li>
+        <li><a href="#creator-profile" class="nav-link scrollto" data-nav-link aria-label="Creator profile"><i class="bx bx-user-pin" aria-hidden="true"></i><span>Creator</span></a></li>
       </ul>
-    </nav><!-- .nav-menu -->
+    </nav>
+  </header><!-- End cinematic navigation rail -->
 
-  </header><!-- End Header -->
+  <nav class="madd-mobile-nav" aria-label="Mobile primary navigation">
+    <a href="#hero" class="scrollto active" data-mobile-nav-link data-nav-link aria-current="location"><i class="bx bx-home-alt" aria-hidden="true"></i><span>Home</span></a>
+    <a href="#about" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-user" aria-hidden="true"></i><span>About</span></a>
+    <a href="#portfolio" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-movie-play" aria-hidden="true"></i><span>Work</span></a>
+    <a href="#skills" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-grid-alt" aria-hidden="true"></i><span>Skills</span></a>
+    <button type="button" class="madd-mobile-nav__more" aria-label="More" aria-expanded="false" aria-controls="mobile-nav-more" data-mobile-more-toggle>
+      <i class="bx bx-dots-horizontal-rounded" aria-hidden="true"></i><span>More</span>
+    </button>
+    <div id="mobile-nav-more" class="madd-mobile-nav__panel" data-mobile-more-panel hidden>
+      <a href="#resume" class="scrollto" data-nav-link><i class="bx bx-file-blank" aria-hidden="true"></i><span>Resume</span></a>
+      <a href="#services" class="scrollto" data-nav-link><i class="bx bx-message-square-dots" aria-hidden="true"></i><span>Contact</span></a>
+      <a href="#creator-profile" class="scrollto" data-nav-link><i class="bx bx-user-pin" aria-hidden="true"></i><span>Creator</span></a>
+    </div>
+  </nav>
 
   <!-- ======= Hero ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Ahmad Farrel Hamdan Sholichan</h1>
-      <p>
-        I’m a<span class="typed" data-typed-items="ㅤTravel Content Creator,ㅤVideo Editor,ㅤVideographer,ㅤWeb Developer,ㅤInformatics Student"></span>
-      </p>
-      
-      <div class="social-links">
-        <a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&sender_device=pc" class="twitter"><i class="bx bxl-tiktok"></i></a>
-        <a href="https://wa.me/62895806707860" class="facebook"><i class="bx bxl-whatsapp"></i></a>
-        <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&utm_source=qr" class="instagram"><i class="bx bxl-instagram"></i></a>
+  <section id="hero" class="hero-home section-blend section-blend--to-about d-flex flex-column justify-content-center" aria-labelledby="hero-title" data-nav-section>
+    <div class="hero-home__background" aria-hidden="true"></div>
+    <div class="hero-home__floating-labels" data-hero-labels aria-hidden="true"></div>
+
+    <div class="container hero-home__content-wrap">
+      <div class="hero-home__content">
+        <span class="hero-home__eyebrow">MADD / CREATIVE PORTFOLIO</span>
+        <h1 id="hero-title" class="hero-home__name">
+          <span class="hero-home__name-primary" data-text="Ahmad Farrel">Ahmad Farrel</span>
+          <span class="hero-home__name-secondary">Hamdan Sholichan</span>
+        </h1>
+        <p class="hero-home__profession">I’m a <span class="typed">Video Editor</span></p>
+
+        <div class="social-links hero-home__socials" aria-label="Social media links">
+          <a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&amp;sender_device=pc" class="twitter" aria-label="TikTok Ahmad Farrel"><i class="bx bxl-tiktok" aria-hidden="true"></i></a>
+          <a href="https://wa.me/" class="facebook" data-whatsapp-link aria-label="WhatsApp Ahmad Farrel"><i class="bx bxl-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr" class="instagram" aria-label="Instagram Ahmad Farrel"><i class="bx bxl-instagram" aria-hidden="true"></i></a>
+        </div>
       </div>
     </div>
+    <a href="#about" class="hero-home__scroll-cue scrollto" aria-label="Scroll to About Me">
+      <span aria-hidden="true"></span>
+      About
+    </a>
   </section>
   <!-- End Hero -->
 
-  <main id="main">
+  <main id="main" tabindex="-1">
 
     <!-- ======= About Me ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+    <section id="about" class="about about-showcase section-blend section-blend--to-skills" aria-labelledby="about-title" data-nav-section>
+      <div class="about-showcase__backdrop" aria-hidden="true">
+        <span class="about-showcase__section-number">01</span>
+        <span class="about-showcase__glow"></span>
+        <span class="about-showcase__grid"></span>
+      </div>
 
-        <div class="section-title">
-          <h2>ABOUT ME</h2>
-          <p>
-            Hi, I’m Ahmad Farrel Hamdan Sholichan—an Informatics Engineering student who blends creativity and technology.
-            I create travel-focused content through cinematic video editing, videography, and storytelling.
-            I’m passionate about producing clean, engaging visuals and continuously improving my skills to deliver professional results.
-          </p>
+      <div class="container" data-aos="fade-up">
+        <div class="about-showcase__label" data-about-reveal data-reveal-order="1">
+          <span>01</span> Creative profile
         </div>
 
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="aseet/Ranu pane.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>Web Developer &amp; Travel Content Creator</h3>
-            <p class="fst-italic">
-              Currently in my 3rd semester of Informatics Engineering at Universitas Muhammadiyah Gresik—learning tech while building real projects.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Date of Birth:</strong> <span>15 November 2007</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://maddd327.github.io/Agen-Madd/">Agen - Madd</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Gresik, East Java</span></li>
-                </ul>
+        <div class="about-showcase__layout">
+          <div class="about-showcase__media-reveal" data-about-reveal data-reveal-order="2">
+            <div class="about-depth-composition" data-about-depth>
+              <div class="about-poster">
+                <div class="about-poster__glare" data-about-glare aria-hidden="true"></div>
+                <span class="about-poster__corner about-poster__corner--tl" aria-hidden="true"></span>
+                <span class="about-poster__corner about-poster__corner--tr" aria-hidden="true"></span>
+                <span class="about-poster__corner about-poster__corner--bl" aria-hidden="true"></span>
+                <span class="about-poster__corner about-poster__corner--br" aria-hidden="true"></span>
+                <picture>
+                  <source srcset="assets/media/images/about-profile-960.webp" type="image/webp">
+                  <img src="aseet/Ranu pane.jpg" class="about-poster__image" width="540" height="960" loading="lazy" decoding="async" alt="Ahmad Farrel outdoors at Ranu Pane">
+                </picture>
+                <span class="about-poster__caption">MADD / CREATIVE PORTFOLIO</span>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>18</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>WhatsApp:</strong> <span><a href="https://wa.me/62895806707860">0895806707860</a></span></li>
-                  <li><i class="bi bi-chevron-left"></i> <strong>Email:</strong> <span><a href="mailto:armafarwidyantono@gmail.com">armafarwidyantono@gmail.com</a></span></li>
-                </ul>
+
+              <div class="about-floating-skills" data-about-reveal data-reveal-order="4" aria-label="Core skills">
+                <span class="about-floating-skill about-floating-skill--one" data-depth="32"><span>Premiere Pro</span></span>
+                <span class="about-floating-skill about-floating-skill--two" data-depth="42"><span>After Effects</span></span>
+                <span class="about-floating-skill about-floating-skill--three" data-depth="36"><span>Cinematography</span></span>
+                <span class="about-floating-skill about-floating-skill--four" data-depth="28"><span>Web Development</span></span>
               </div>
             </div>
-            <p>
-              My focus is on <strong>video editing</strong> and <strong>content production</strong>, while also growing as a <strong>web developer</strong>.
-              I’m open to collaborations, creative projects, and opportunities where I can bring strong visuals and reliable execution.
+          </div>
+
+          <div class="about-showcase__content content">
+            <header data-about-reveal data-reveal-order="5">
+              <p class="about-showcase__eyebrow">About Me</p>
+              <h2 id="about-title">Creativity, technology, and cinematic storytelling.</h2>
+            </header>
+
+            <div class="about-showcase__bio" data-about-reveal data-reveal-order="5">
+              <p class="about-showcase__intro">
+                Hi, I’m Ahmad Farrel Hamdan Sholichan—a 5th-semester Informatics Engineering student blending creativity and technology.
+                I create travel-focused stories through cinematic editing, videography, and web projects while continually refining my craft.
+              </p>
+              <h3>Web Developer &amp; Travel Content Creator</h3>
+              <p class="fst-italic">
+                Currently a 5th-semester Informatics Engineering student at Universitas Muhammadiyah Gresik—learning technology while building real projects.
+              </p>
+            </div>
+
+            <div class="about-badges" data-about-reveal data-reveal-order="6" aria-label="Profile highlights">
+              <span><i class="bx bx-map" aria-hidden="true"></i> Gresik, East Java</span>
+              <span><i class="bx bx-book-open" aria-hidden="true"></i> Informatics Engineering / Semester 5</span>
+              <span><i class="bx bx-camera-movie" aria-hidden="true"></i> Web &amp; Travel Content</span>
+              <span><i class="bx bx-group" aria-hidden="true"></i> Open to collaboration</span>
+            </div>
+
+            <dl class="about-meta" data-about-reveal data-reveal-order="6">
+              <div><dt>Date of Birth</dt><dd>15 November 2007</dd></div>
+              <div><dt>Age</dt><dd>18</dd></div>
+              <div><dt>Website</dt><dd><a href="https://maddd327.github.io/Agen-Madd/">Agen - Madd</a></dd></div>
+              <div><dt>WhatsApp</dt><dd><a href="https://wa.me/" data-whatsapp-link data-whatsapp-display>WhatsApp</a></dd></div>
+              <div><dt>Location</dt><dd>Gresik, East Java</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:armafarwidyantono@gmail.com">armafarwidyantono@gmail.com</a></dd></div>
+            </dl>
+
+            <p class="about-showcase__focus" data-about-reveal data-reveal-order="6">
+              Focused on <strong>video editing</strong>, <strong>content production</strong>, and <strong>web development</strong>—open to thoughtful collaborations and creative projects.
             </p>
+
+            <div class="about-stats" data-about-reveal data-reveal-order="7" aria-label="Profile statistics">
+              <article class="about-stat">
+                <strong class="about-stat__value" data-count-source="skills">0</strong>
+                <span>Skill areas listed</span>
+              </article>
+              <article class="about-stat">
+                <strong class="about-stat__value" data-count-source="skill-categories">0</strong>
+                <span>Toolbox categories</span>
+              </article>
+            </div>
+
+            <div class="about-timeline" data-about-reveal data-reveal-order="8" aria-label="Creative journey timeline">
+              <h3>Creative journey</h3>
+              <ol>
+                <li><time>2018 — 2021</time><span>Started editing in 9th grade using a smartphone.</span></li>
+                <li><time>2021 — 2024</time><span>Built visual and web skills through Software Engineering studies and creative projects.</span></li>
+                <li><time>2023 — Present</time><span>Freelance video editor and videographer.</span></li>
+                <li><time>2024 — Present</time><span>Informatics Engineering student.</span></li>
+              </ol>
+            </div>
           </div>
         </div>
-
       </div>
     </section><!-- End About Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
+    <section id="skills" class="skills skills-toolbox section-bg section-blend section-blend--to-resume" aria-labelledby="skills-title" data-nav-section>
+      <div class="skills-toolbox__constellation" aria-hidden="true">
+        <svg viewBox="0 0 1200 520" preserveAspectRatio="none">
+          <path d="M70 350L245 180L420 285L610 105L805 255L1010 120L1140 320"></path>
+          <path d="M180 455L355 365L560 430L760 345L930 455"></path>
+          <g><circle cx="70" cy="350" r="4"></circle><circle cx="245" cy="180" r="5"></circle><circle cx="420" cy="285" r="4"></circle><circle cx="610" cy="105" r="5"></circle><circle cx="805" cy="255" r="4"></circle><circle cx="1010" cy="120" r="5"></circle><circle cx="1140" cy="320" r="4"></circle></g>
+        </svg>
+      </div>
+
       <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>SKILLS</h2>
-          <p>
-            A snapshot of the skills I use to create content, build projects, and deliver results—both creatively and technically.
-          </p>
+        <div class="section-title skills-toolbox__heading">
+          <span class="skills-toolbox__kicker">Interactive creative toolbox</span>
+          <h2 id="skills-title">SKILLS</h2>
+          <p>A snapshot of the skills I use to create content, build projects, and deliver results—both creatively and technically.</p>
         </div>
 
-        <div class="row skills-content">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">ADOBE AFTER EFFECT <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">ADOBE PREMIERE PRO <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">3D MOTION <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CINEMATOGRAPHY <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">HTML &amp; CSS <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">C++ &amp; PYTHON &amp; JAVA <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">PHOTO / VIDEOGRAPHY <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">TRAVEL CONTENT CREATION <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
+        <div class="skills-toolbox__tabs" role="tablist" aria-label="Skill categories">
+          <button type="button" id="skills-tab-creative" class="skills-toolbox__tab is-active" role="tab" aria-selected="true" aria-controls="skills-panel" tabindex="0" data-skill-filter="creative">Creative</button>
+          <button type="button" id="skills-tab-development" class="skills-toolbox__tab" role="tab" aria-selected="false" aria-controls="skills-panel" tabindex="-1" data-skill-filter="development">Development</button>
+          <button type="button" id="skills-tab-tools" class="skills-toolbox__tab" role="tab" aria-selected="false" aria-controls="skills-panel" tabindex="-1" data-skill-filter="tools">Tools</button>
         </div>
 
+        <div class="skills-toolbox__layout skills-content">
+          <div id="skills-panel" class="skills-toolbox__panel" role="tabpanel" aria-labelledby="skills-tab-creative" tabindex="0">
+            <div class="skills-card-grid" data-skills-grid>
+              <noscript><p class="skills-toolbox__noscript">Enable JavaScript to explore the interactive skills toolbox.</p></noscript>
+            </div>
+          </div>
+
+          <aside id="skills-detail" class="skills-detail" aria-live="polite">
+            <span class="skills-detail__eyebrow">Selected skill</span>
+            <div class="skills-detail__icon" aria-hidden="true"><i class="bx bx-cube-alt"></i></div>
+            <h3 class="skills-detail__name">Creative toolbox</h3>
+            <dl>
+              <div data-skill-detail-field="category"><dt>Category</dt><dd class="skills-detail__category"></dd></div>
+              <div data-skill-detail-field="percentage"><dt>Proficiency</dt><dd class="skills-detail__percentage"></dd></div>
+              <div data-skill-detail-field="level"><dt>Level</dt><dd class="skills-detail__level"></dd></div>
+              <div data-skill-detail-field="focus"><dt>Focus</dt><dd class="skills-detail__focus"></dd></div>
+              <div data-skill-detail-field="tools"><dt>Related tools</dt><dd class="skills-detail__tools"></dd></div>
+            </dl>
+            <div class="skills-detail__meter" aria-hidden="true"><span></span></div>
+            <p class="skills-detail__description" hidden></p>
+          </aside>
+        </div>
+
+        <div class="skills-marquee" aria-label="Tools and technologies listed in the portfolio">
+          <div class="skills-marquee__track">
+            <div class="skills-marquee__group" data-skills-marquee></div>
+            <div class="skills-marquee__group" data-skills-marquee aria-hidden="true"></div>
+          </div>
+        </div>
       </div>
     </section><!-- End Skills Section -->
 
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>RESUME &amp; BACKGROUND</h2>
-          <p>
-            Here’s a quick overview of my background—built through hands-on projects, professional experience, and consistent self-learning.
-          </p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">EDUCATION</h3>
-
-            <div class="resume-item">
-              <h4>Informatics Engineering Student</h4>
-              <h5>September 2024 - Present</h5>
-              <p><em></em></p>
-              <ul>
-                <li>Building a strong foundation in programming and software development (Java and related technologies).</li>
-                <li>Active in student organizations—handling documentation and visual content for events and activities.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>English Course in Pare (MR BOB)</h4>
-              <h5>July 2025 - August 2025</h5>
-              <p><em></em></p>
-              <ul>
-                <li>Returned to Pare to strengthen my English—especially speaking confidence and daily conversation.</li>
-                <li>Focused on gaining new experiences and opportunities, including editing work, competitions, and collaborative projects.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>English Course in Pare (LC Language Center)</h4>
-              <h5>February 2025 - April 2025</h5>
-              <p><em></em></p>
-              <ul>
-                <li>Improved everyday English communication through active speaking practice.</li>
-                <li>Preparing for future international experiences and exploring nature-focused travel opportunities.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Vocational High School (SMK)</h4>
-              <h5>July 2021 - February 2024</h5>
-              <p><em>Major: <strong>RPL</strong> (Software Engineering) at <strong>SMK SEMEN GRESIK</strong></em></p>
-              <ul>
-                <li>Served as a student council (OSIS) member and later took leadership responsibilities in the ICT division.</li>
-                <li>Started my creative journey as an <strong>editor</strong> and <strong>photo/videographer</strong>, building strong visual skills.</li>
-                <li>Developed an interest in programming and began learning C++ and web technologies.</li>
-                <li>Learned HTML, CSS, JavaScript, and Bootstrap—then applied them to real websites, including this portfolio.</li>
-                <li>Created and published edited video content consistently across social platforms.</li>
-                <li>Completed an internship at <strong>PT PETROKIMIA GRESIK</strong> as part of the creative team.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Junior High School (SMP)</h4>
-              <h5>July 2018 - July 2021</h5>
-              <p><em>SMP ISLAMIC QON</em></p>
-              <ul>
-                <li>Joined student council activities and learned teamwork, responsibility, and leadership.</li>
-                <li>Started editing in 9th grade using a smartphone—then continued improving through consistent practice.</li>
-              </ul>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-            <h3 class="resume-title">EXPERIENCE</h3>
-
-            <div class="resume-item">
-              <h4>Freelance</h4>
-              <h5>2023 - Present</h5>
-              <ul>
-                <li>Freelance <strong>video editor</strong> and <strong>videographer</strong>—creating engaging content for social media and personal brands.</li>
-                <li>Strong in outdoor shooting and storytelling—turning raw footage into clean, cinematic videos.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Part-Time - CV ABITA BOOMPARTTOR</h4>
-              <h5>March 2024 - July 2024</h5>
-              <ul>
-                <li>Worked as an <strong>editor</strong> in the creative team, delivering content consistently on schedule.</li>
-                <li>Supported production workflow as an Assistant PV—handling editing and assisting video production needs.</li>
-                <li>Promoted within one month due to fast adaptation, strong output, and team reliability.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Creative Team - Petrokimia Training Program</h4>
-              <h5>March 2024 - October 2024</h5>
-              <ul>
-                <li>Part of the <strong>creative team</strong>—supporting media production for internal programs and activities.</li>
-                <li>Assisted editing and videography—from shooting to final delivery.</li>
-                <li>Trusted with a 3-month contract role as an Assistant Editor.</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
+    <!-- ======= Cinematic Career Journey ======= -->
+    <section id="resume" class="resume resume-journey section-blend section-blend--to-portfolio" aria-labelledby="resume-title" data-nav-section>
+      <div class="resume-journey__backdrop" aria-hidden="true">
+        <span class="resume-journey__number">02</span>
+        <span class="resume-journey__grid"></span>
       </div>
-    </section>
-    <!-- End Resume Section -->
+
+      <div class="container">
+        <header class="resume-journey__heading" data-resume-reveal>
+          <span class="resume-journey__kicker">Career Journey</span>
+          <h2 id="resume-title">Cinematic Career Journey</h2>
+          <p>Ahmad Farrel Hamdan Sholichan — a background shaped by education, hands-on creative work, and consistent self-learning.</p>
+        </header>
+
+        <div class="resume-tabs" role="tablist" aria-label="Career journey categories">
+          <button type="button" id="resume-tab-education" class="resume-tabs__button is-active" role="tab" aria-selected="true" aria-controls="resume-education" tabindex="0" data-resume-tab="education">Education</button>
+          <button type="button" id="resume-tab-experience" class="resume-tabs__button" role="tab" aria-selected="false" aria-controls="resume-experience" tabindex="-1" data-resume-tab="experience">Experience</button>
+        </div>
+
+        <div class="resume-journey__columns">
+          <section id="resume-education" class="resume-column resume-column--education" role="tabpanel" aria-labelledby="resume-tab-education" data-resume-group="education">
+            <header class="resume-column__heading"><span>01</span><h3>Education</h3></header>
+            <div class="resume-timeline">
+              <article class="resume-card is-current" data-resume-card>
+                <div class="resume-card__meta"><time>September 2024 — Present</time><span class="resume-card__current">Current</span></div>
+                <h4>Informatics Engineering Student</h4>
+                <p class="resume-card__institution">Universitas Muhammadiyah Gresik / Semester 5</p>
+                <p class="resume-card__summary">Building a strong foundation in programming and software development (Java and related technologies).</p>
+                <details><summary aria-expanded="false">View details</summary><ul><li>Active in student organizations—handling documentation and visual content for events and activities.</li></ul></details>
+              </article>
+
+              <article class="resume-card" data-resume-card>
+                <div class="resume-card__meta"><time>July 2025 — August 2025</time></div>
+                <h4>English Course in Pare (MR BOB)</h4>
+                <p class="resume-card__summary">Returned to Pare to strengthen my English—especially speaking confidence and daily conversation.</p>
+                <details><summary aria-expanded="false">View details</summary><ul><li>Focused on gaining new experiences and opportunities, including editing work, competitions, and collaborative projects.</li></ul></details>
+              </article>
+
+              <article class="resume-card" data-resume-card>
+                <div class="resume-card__meta"><time>February 2025 — April 2025</time></div>
+                <h4>English Course in Pare (LC Language Center)</h4>
+                <p class="resume-card__summary">Improved everyday English communication through active speaking practice.</p>
+                <details><summary aria-expanded="false">View details</summary><ul><li>Preparing for future international experiences and exploring nature-focused travel opportunities.</li></ul></details>
+              </article>
+
+              <article class="resume-card" data-resume-card>
+                <div class="resume-card__meta"><time>July 2021 — February 2024</time></div>
+                <h4>Vocational High School (SMK)</h4>
+                <p class="resume-card__institution">Major: <strong>RPL</strong> (Software Engineering) at <strong>SMK SEMEN GRESIK</strong></p>
+                <p class="resume-card__summary">Served as a student council (OSIS) member and later took leadership responsibilities in the ICT division.</p>
+                <details><summary aria-expanded="false">View details</summary><ul>
+                  <li>Started my creative journey as an <strong>editor</strong> and <strong>photo/videographer</strong>, building strong visual skills.</li>
+                  <li>Developed an interest in programming and began learning C++ and web technologies.</li>
+                  <li>Learned HTML, CSS, JavaScript, and Bootstrap—then applied them to real websites, including this portfolio.</li>
+                  <li>Created and published edited video content consistently across social platforms.</li>
+                  <li>Completed an internship at <strong>PT PETROKIMIA GRESIK</strong> as part of the creative team.</li>
+                </ul></details>
+              </article>
+
+              <article class="resume-card" data-resume-card>
+                <div class="resume-card__meta"><time>July 2018 — July 2021</time></div>
+                <h4>Junior High School (SMP)</h4>
+                <p class="resume-card__institution">SMP ISLAMIC QON</p>
+                <p class="resume-card__summary">Joined student council activities and learned teamwork, responsibility, and leadership.</p>
+                <details><summary aria-expanded="false">View details</summary><ul><li>Started editing in 9th grade using a smartphone—then continued improving through consistent practice.</li></ul></details>
+              </article>
+            </div>
+          </section>
+
+          <section id="resume-experience" class="resume-column resume-column--experience" role="tabpanel" aria-labelledby="resume-tab-experience" data-resume-group="experience">
+            <header class="resume-column__heading"><span>02</span><h3>Experience</h3></header>
+            <div class="resume-timeline">
+              <article class="resume-card is-current" data-resume-card>
+                <div class="resume-card__meta"><time>2023 — Present</time><span class="resume-card__current">Current</span></div>
+                <h4>Freelance</h4>
+                <p class="resume-card__summary">Freelance <strong>video editor</strong> and <strong>videographer</strong>—creating engaging content for social media and personal brands.</p>
+                <details><summary aria-expanded="false">View details</summary><ul><li>Strong in outdoor shooting and storytelling—turning raw footage into clean, cinematic videos.</li></ul></details>
+              </article>
+
+              <article class="resume-card" data-resume-card>
+                <div class="resume-card__meta"><time>March 2024 — July 2024</time></div>
+                <h4>Part-Time — CV ABITA BOOMPARTTOR</h4>
+                <p class="resume-card__summary">Worked as an <strong>editor</strong> in the creative team, delivering content consistently on schedule.</p>
+                <details><summary aria-expanded="false">View details</summary><ul>
+                  <li>Supported production workflow as an Assistant PV—handling editing and assisting video production needs.</li>
+                  <li>Promoted within one month due to fast adaptation, strong output, and team reliability.</li>
+                </ul></details>
+              </article>
+
+              <article class="resume-card" data-resume-card>
+                <div class="resume-card__meta"><time>March 2024 — October 2024</time></div>
+                <h4>Creative Team — Petrokimia Training Program</h4>
+                <p class="resume-card__summary">Part of the <strong>creative team</strong>—supporting media production for internal programs and activities.</p>
+                <details><summary aria-expanded="false">View details</summary><ul>
+                  <li>Assisted editing and videography—from shooting to final delivery.</li>
+                  <li>Trusted with a 3-month contract role as an Assistant Editor.</li>
+                </ul></details>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section><!-- End Cinematic Career Journey -->
 
     <!-- ======= Portfolio Section ======= -->
-<section id="portfolio" class="portfolio section-bg">
+<section id="portfolio" class="portfolio section-bg section-blend section-blend--to-contact" aria-labelledby="portfolio-title" data-nav-section>
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>WORK &amp; PORTFOLIO</h2>
+      <h2 id="portfolio-title">WORK &amp; PORTFOLIO</h2>
       <p>
         Selected works—showcasing my editing style, storytelling, and visual quality. I aim for clean cuts, strong pacing, and a cinematic feel.
       </p>
@@ -335,11 +398,11 @@
 
     <div class="row">
       <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-        <ul id="portfolio-flters">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">Videos</li>
-          <li data-filter=".filter-card">Photos</li>
-          <li data-filter=".filter-web">Web</li>
+        <ul id="portfolio-flters" aria-label="Filter portfolio projects">
+          <li><button type="button" data-filter="*" class="filter-active" aria-pressed="true">All</button></li>
+          <li><button type="button" data-filter=".filter-app" aria-pressed="false">Videos</button></li>
+          <li><button type="button" data-filter=".filter-card" aria-pressed="false">Photos</button></li>
+          <li><button type="button" data-filter=".filter-web" aria-pressed="false">Web</button></li>
         </ul>
       </div>
     </div>
@@ -348,17 +411,51 @@
 
       <!-- VIDEO -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset project 2026/potrait main - frame.jpg" class="img-fluid" alt="Motion graph" loading="lazy">
+        <div class="portfolio-wrap tilt-card is-video-unavailable" data-portfolio-id="motion-graph" data-media-type="video">
+          <img src="assets/media/images/portfolio-01.webp" class="img-fluid" width="540" height="960" alt="Motion graph" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>Motion graph</h4>
+            <h3>Motion graph</h3>
             <p>Video</p>
             <div class="portfolio-links">
-              <a href="aseet/aset project 2026/potrait main.mp4"
-                 class="portfolio-details-lightbox"
+              <span class="portfolio-video-status" data-portfolio-primary aria-label="Motion graph video coming soon">
+                <i class="bx bx-time-five" aria-hidden="true"></i><span>Video coming soon</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap tilt-card is-video-unavailable" data-portfolio-id="motion-x-mrbob" data-media-type="video">
+          <img src="assets/media/images/portfolio-02.webp" class="img-fluid" width="540" height="960" alt="Motion X video mrbob" loading="lazy" decoding="async">
+          <div class="portfolio-info tilt-pop">
+            <h3>Motion X video mrbob</h3>
+            <p>Video</p>
+            <div class="portfolio-links">
+              <span class="portfolio-video-status" data-portfolio-primary aria-label="Motion X video mrbob coming soon">
+                <i class="bx bx-time-five" aria-hidden="true"></i><span>Video coming soon</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="internship-edit" data-media-type="video" data-preview-label="Preview Internship - Edit">
+          <img src="assets/media/images/portfolio-03.webp" class="img-fluid" width="960" height="540" alt="Internship - Edit" loading="lazy" decoding="async">
+          <div class="portfolio-info tilt-pop">
+            <h3>Internship - Edit</h3>
+            <p>Video</p>
+            <div class="portfolio-links">
+              <a href="assets/media/previews/internship-edit.webm"
+                 class="portfolio-lightbox portfolio-video-trigger"
+                 data-portfolio-primary
                  data-glightbox="type: video"
-                 title="Motion graph">
-                <i class="bx bx-video"></i>
+                 data-gallery="portfolioGallery"
+                 title="Internship - Edit — 6-second preview">
+                <i class="bx bx-play-circle" aria-hidden="true"></i><span class="portfolio-action-label">6s Preview</span>
               </a>
             </div>
           </div>
@@ -367,56 +464,15 @@
 
       <!-- VIDEO -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset project 2026/Motion X video mrbob - frame.jpg" class="img-fluid" alt="Motion X video mrbob" loading="lazy">
+        <div class="portfolio-wrap tilt-card is-video-unavailable" data-portfolio-id="aila-travel" data-media-type="video">
+          <img src="assets/media/images/portfolio-04.webp" class="img-fluid" width="540" height="960" alt="AILA travel" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>Motion X video mrbob</h4>
+            <h3>AILA Travel</h3>
             <p>Video</p>
             <div class="portfolio-links">
-              <a href="aseet/aset project 2026/Motion X video mrbob.mp4"
-                 class="portfolio-details-lightbox"
-                 data-glightbox="type: video"
-                 title="Motion X video mrbob">
-                <i class="bx bx-video"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VIDEO -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/magang vidoe/magang gbut - frame at 0m9s.jpg" class="img-fluid" alt="Internship - Edit" loading="lazy">
-          <div class="portfolio-info tilt-pop">
-            <h4>Internship - Edit</h4>
-            <p>Video</p>
-            <div class="portfolio-links">
-              <a href="aseet/magang vidoe/magang gbut.mp4"
-                 class="portfolio-details-lightbox"
-                 data-glightbox="type: video"
-                 title="Internship Video">
-                <i class="bx bx-video"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VIDEO -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset project 2026/Content AILA travel - frame.jpg" class="img-fluid" alt="AILA travel" loading="lazy">
-          <div class="portfolio-info tilt-pop">
-            <h4>AILA Travel</h4>
-            <p>Video</p>
-            <div class="portfolio-links">
-              <a href="aseet/aset project 2026/Content AILA travel.mp4"
-                 class="portfolio-details-lightbox"
-                 data-glightbox="type: video"
-                 title="AILA travel">
-                <i class="bx bx-video"></i>
-              </a>
+              <span class="portfolio-video-status" data-portfolio-primary aria-label="AILA Travel video coming soon">
+                <i class="bx bx-time-five" aria-hidden="true"></i><span>Video coming soon</span>
+              </span>
             </div>
           </div>
         </div>
@@ -424,18 +480,15 @@
 
       <!-- VIDEO (kamu taruh filter-card, aku tetepin) -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset project 2026/konten 3D ubz - frame.jpg" class="img-fluid" alt="Konten 3D" loading="lazy">
+        <div class="portfolio-wrap tilt-card is-video-unavailable" data-portfolio-id="konten-3d" data-media-type="video">
+          <img src="assets/media/images/portfolio-05.webp" class="img-fluid" width="540" height="960" alt="Konten 3D" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>Konten 3D</h4>
+            <h3>Konten 3D</h3>
             <p>Video</p>
             <div class="portfolio-links">
-              <a href="aseet/aset project 2026/konten 3D ubz.mp4"
-                 class="portfolio-details-lightbox"
-                 data-glightbox="type: video"
-                 title="Konten 3D">
-                <i class="bx bx-video"></i>
-              </a>
+              <span class="portfolio-video-status" data-portfolio-primary aria-label="Konten 3D video coming soon">
+                <i class="bx bx-time-five" aria-hidden="true"></i><span>Video coming soon</span>
+              </span>
             </div>
           </div>
         </div>
@@ -443,18 +496,15 @@
 
       <!-- VIDEO -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset project 2026/3D book - frame.jpg" class="img-fluid" alt="3D book" loading="lazy">
+        <div class="portfolio-wrap tilt-card is-video-unavailable" data-portfolio-id="3d-book" data-media-type="video">
+          <img src="assets/media/images/portfolio-06.webp" class="img-fluid" width="960" height="540" alt="3D book" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>3D book</h4>
+            <h3>3D book</h3>
             <p>Video</p>
             <div class="portfolio-links">
-              <a href="aseet/aset project 2026/3D book.mp4"
-                 class="portfolio-details-lightbox"
-                 data-glightbox="type: video"
-                 title="3D book">
-                <i class="bx bx-video"></i>
-              </a>
+              <span class="portfolio-video-status" data-portfolio-primary aria-label="3D book video coming soon">
+                <i class="bx bx-time-five" aria-hidden="true"></i><span>Video coming soon</span>
+              </span>
             </div>
           </div>
         </div>
@@ -462,13 +512,13 @@
 
       <!-- EXTERNAL PAGES -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/bromo 25/Ranu pane pengunjung (12).jpg" class="img-fluid" alt="Ranu Regulo" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="ranu-regulo" data-media-type="photo">
+          <img src="assets/media/images/portfolio-07.webp" class="img-fluid" width="540" height="960" alt="Ranu Regulo" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>Ranu Regulo</h4>
+            <h3>Ranu Regulo</h3>
             <p>Photo</p>
             <div class="portfolio-links">
-              <a href="ranuregulo.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Ranu Regulo">
+              <a href="ranuregulo.html" class="portfolio-project-link" data-portfolio-primary title="Open Ranu Regulo project page">
                 <i class="bx bx-photo-album"></i>
               </a>
             </div>
@@ -477,13 +527,13 @@
       </div>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/gn arjuno/gn arjuna 1.jpg" class="img-fluid" alt="Mt. Arjuna Summit" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="mt-arjuna" data-media-type="photo">
+          <img src="assets/media/images/portfolio-08.webp" class="img-fluid" width="541" height="960" alt="Mt. Arjuna Summit" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>Mt. Arjuna Summit</h4>
+            <h3>Mt. Arjuna Summit</h3>
             <p>Photo</p>
             <div class="portfolio-links">
-              <a href="Gn arjuno.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Mt. Arjuna">
+              <a href="Gn arjuno.html" class="portfolio-project-link" data-portfolio-primary title="Open Mt. Arjuna project page">
                 <i class="bx bx-photo-album"></i>
               </a>
             </div>
@@ -492,13 +542,13 @@
       </div>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/GN kelud/gn keld.jpg" class="img-fluid" alt="Mt. Kelud" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="mt-kelud" data-media-type="photo">
+          <img src="assets/media/images/portfolio-09.webp" class="img-fluid" width="540" height="960" alt="Mt. Kelud" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>Mt. Kelud</h4>
+            <h3>Mt. Kelud</h3>
             <p>Photo</p>
             <div class="portfolio-links">
-              <a href="gn kelud.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Mt. Kelud Photo Album">
+              <a href="gn kelud.html" class="portfolio-project-link" data-portfolio-primary title="Open Mt. Kelud project page">
                 <i class="bx bx-photo-album"></i>
               </a>
             </div>
@@ -507,13 +557,13 @@
       </div>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset photo bromo/satu.jpg" class="img-fluid" alt="Bromo - Photo Hunt" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="bromo-photo-hunt" data-media-type="photo">
+          <img src="assets/media/images/portfolio-10.webp" class="img-fluid" width="540" height="960" alt="Bromo - Photo Hunt" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>Bromo - Photo Hunt</h4>
+            <h3>Bromo - Photo Hunt</h3>
             <p>Photo</p>
             <div class="portfolio-links">
-              <a href="bromo.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Bromo Photo Hunt">
+              <a href="bromo.html" class="portfolio-project-link" data-portfolio-primary title="Open Bromo Photo Hunt project page">
                 <i class="bx bx-photo-album"></i>
               </a>
             </div>
@@ -522,13 +572,13 @@
       </div>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset photo bromo/cangar1.jpg" class="img-fluid" alt="Cangar Photo Hunt" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="cangar-photo-hunt" data-media-type="photo">
+          <img src="assets/media/images/portfolio-11.webp" class="img-fluid" width="540" height="960" alt="Cangar Photo Hunt" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>Cangar Photo Hunt</h4>
+            <h3>Cangar Photo Hunt</h3>
             <p>Photo</p>
             <div class="portfolio-links">
-              <a href="cangar.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Cangar Photo Hunt">
+              <a href="cangar.html" class="portfolio-project-link" data-portfolio-primary title="Open Cangar Photo Hunt project page">
                 <i class="bx bx-photo-album"></i>
               </a>
             </div>
@@ -538,21 +588,22 @@
 
       <!-- VIDEO + TIKTOK -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset project/CINEMATIC BATU_Moment.jpg" class="img-fluid" alt="CINEMATIC BATU" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="cinematic-batu" data-media-type="video" data-preview-label="Preview Cinematic Batu">
+          <img src="assets/media/images/portfolio-12.webp" class="img-fluid" width="960" height="540" alt="CINEMATIC BATU" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>CINEMATIC</h4>
+            <h3>CINEMATIC</h3>
             <p>Video</p>
             <div class="portfolio-links">
-              <a href="CINEMATIC BATU.mp4"
-                 class="portfolio-lightbox"
+              <a href="assets/media/previews/cinematic-batu.webm"
+                 class="portfolio-lightbox portfolio-video-trigger"
+                 data-portfolio-primary
                  data-glightbox="type: video"
                  data-gallery="portfolioGallery"
-                 title="This video was made at Coban Talun Waterfall, Batu">
-                <i class="bx bx-video"></i>
+                 title="Cinematic Batu — 6-second preview">
+                <i class="bx bx-play-circle" aria-hidden="true"></i><span class="portfolio-action-label">6s Preview</span>
               </a>
-              <a href="https://www.tiktok.com/@madd._ahmad/video/7124315963469647130?is_from_webapp=1&sender_device=pc&web_id=7090493346644690434"
-                 data-glightbox="type: external" title="TikTok">
+              <a href="https://www.tiktok.com/@madd._ahmad/video/7124315963469647130?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7090493346644690434"
+                 target="_blank" rel="noopener" title="Open Cinematic Batu on TikTok">
                 <i class="bx bxl-tiktok"></i>
               </a>
             </div>
@@ -561,14 +612,13 @@
       </div>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset photo adek hunting/DSC_1151.jpg" class="img-fluid" alt="AZEL PHOTO HUNT" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="azel-photo-hunt" data-media-type="photo">
+          <img src="assets/media/images/portfolio-13.webp" class="img-fluid" width="641" height="960" alt="AZEL PHOTO HUNT" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>AZEL PHOTO HUNT</h4>
+            <h3>AZEL PHOTO HUNT</h3>
             <p>Photo</p>
             <div class="portfolio-links">
-              <a href="kayra detail 2.html" class="portfolio-details-lightbox" data-glightbox="type: external"
-                 title="Hi, my name is Alfarezel Putra. I want to join a photography competition with my older brother.">
+              <a href="kayra detail 2.html" class="portfolio-project-link" data-portfolio-primary title="Open Azel Photo Hunt project page">
                 <i class="bx bx-photo-album"></i>
               </a>
             </div>
@@ -577,13 +627,13 @@
       </div>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset cinematic photo/DSC_1168.jpg" class="img-fluid" alt="Photo Hunt - CBR" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="photo-hunt-cbr" data-media-type="photo">
+          <img src="assets/media/images/portfolio-14.webp" class="img-fluid" width="641" height="960" alt="Photo Hunt - CBR" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>Photo Hunt - CBR</h4>
+            <h3>Photo Hunt - CBR</h3>
             <p>Photo</p>
             <div class="portfolio-links">
-              <a href="karya detail cbr.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Photo Hunt - CBR">
+              <a href="karya detail cbr.html" class="portfolio-project-link" data-portfolio-primary title="Open Photo Hunt - CBR project page">
                 <i class="bx bx-photo-album"></i>
               </a>
             </div>
@@ -593,21 +643,22 @@
 
       <!-- VIDEO + TIKTOK -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset project/finishkontennew_1_Moment.jpg" class="img-fluid" alt="3D - After Effects" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="after-effects-3d" data-media-type="video" data-preview-label="Preview 3D - After Effects">
+          <img src="assets/media/images/portfolio-15.webp" class="img-fluid" width="960" height="540" alt="3D - After Effects" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>3D - After Effects</h4>
+            <h3>3D - After Effects</h3>
             <p>Video</p>
             <div class="portfolio-links">
-              <a href="aseet/aset project/finishkontennew_1.mp4"
-                 class="portfolio-lightbox"
+              <a href="assets/media/previews/after-effects-3d.webm"
+                 class="portfolio-lightbox portfolio-video-trigger"
+                 data-portfolio-primary
                  data-glightbox="type: video"
                  data-gallery="portfolioGallery"
-                 title="3D - After Effects">
-                <i class="bx bx-video"></i>
+                 title="3D - After Effects — 6-second preview">
+                <i class="bx bx-play-circle" aria-hidden="true"></i><span class="portfolio-action-label">6s Preview</span>
               </a>
-              <a href="https://www.tiktok.com/@madd._ahmad/video/7128623836672675098?is_from_webapp=1&sender_device=pc&web_id=7090493346644690434"
-                 data-glightbox="type: external" title="TikTok">
+              <a href="https://www.tiktok.com/@madd._ahmad/video/7128623836672675098?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7090493346644690434"
+                 target="_blank" rel="noopener" title="Open 3D - After Effects on TikTok">
                 <i class="bx bxl-tiktok"></i>
               </a>
             </div>
@@ -617,21 +668,22 @@
 
       <!-- VIDEO + TIKTOK -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset project/Jadi luka sore_3_Moment.jpg" class="img-fluid" alt="Jadi Luka" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="jadi-luka-amv" data-media-type="video" data-preview-label="Preview 3D - AMV After Effects">
+          <img src="assets/media/images/portfolio-16.webp" class="img-fluid" width="960" height="524" alt="Jadi Luka" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>3D - AMV (After Effects)</h4>
+            <h3>3D - AMV (After Effects)</h3>
             <p>Video</p>
             <div class="portfolio-links">
-              <a href="aseet/aset project/Jadi luka sore_3.mp4"
-                 class="portfolio-lightbox"
+              <a href="assets/media/previews/jadi-luka-amv.webm"
+                 class="portfolio-lightbox portfolio-video-trigger"
+                 data-portfolio-primary
                  data-glightbox="type: video"
                  data-gallery="portfolioGallery"
-                 title="3D - After Effects - 'Jadi Luka'">
-                <i class="bx bx-video"></i>
+                 title="3D - After Effects - Jadi Luka — 6-second preview">
+                <i class="bx bx-play-circle" aria-hidden="true"></i><span class="portfolio-action-label">6s Preview</span>
               </a>
-              <a href="https://www.tiktok.com/@madd._ahmad/video/7142821231836826906?is_from_webapp=1&sender_device=pc&web_id=7090493346644690434"
-                 data-glightbox="type: external" title="TikTok">
+              <a href="https://www.tiktok.com/@madd._ahmad/video/7142821231836826906?is_from_webapp=1&amp;sender_device=pc&amp;web_id=7090493346644690434"
+                 target="_blank" rel="noopener" title="Open Jadi Luka on TikTok">
                 <i class="bx bxl-tiktok"></i>
               </a>
             </div>
@@ -641,10 +693,10 @@
 
       <!-- WEB -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset foto web/Cuplikan layar 2022-11-11 143635.png" class="img-fluid" alt="Website - Agen - Mad" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="website-agen-mad" data-media-type="web">
+          <img src="assets/media/images/portfolio-17.webp" class="img-fluid" width="960" height="540" alt="Website - Agen - Mad" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>Website - Agen - Mad</h4>
+            <h3>Website - Agen - Mad</h3>
             <p>Website</p>
             <div class="portfolio-links">
               <a href="aseet/aset foto web/Cuplikan layar 2022-11-11 143635.png"
@@ -654,8 +706,10 @@
                 <i class="bx bx-photo-album"></i>
               </a>
               <a href="https://maddd327.github.io/Agen-Madd/"
-                 class="portfolio-details-lightbox"
-                 data-glightbox="type: external"
+                 class="portfolio-project-link"
+                 data-portfolio-primary
+                 target="_blank"
+                 rel="noopener"
                  title="Open Website">
                 <i class="bx bx-link"></i>
               </a>
@@ -666,18 +720,19 @@
 
       <!-- VIDEO -->
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap tilt-card">
-          <img src="aseet/aset project/cine cbri_Moment.jpg" class="img-fluid" alt="CINEMATIC CBR 150R" loading="lazy">
+        <div class="portfolio-wrap tilt-card" data-portfolio-id="cinematic-cbr" data-media-type="video" data-preview-label="Preview After Effects - Cinematic CBR 150R">
+          <img src="assets/media/images/portfolio-18.webp" class="img-fluid" width="960" height="540" alt="CINEMATIC CBR 150R" loading="lazy" decoding="async">
           <div class="portfolio-info tilt-pop">
-            <h4>After Effects - CINEMATIC</h4>
+            <h3>After Effects - CINEMATIC</h3>
             <p>Video</p>
             <div class="portfolio-links">
-              <a href="aseet/aset project/cine cbri.mp4"
-                 class="portfolio-lightbox"
+              <a href="assets/media/previews/cinematic-cbr.webm"
+                 class="portfolio-lightbox portfolio-video-trigger"
+                 data-portfolio-primary
                  data-glightbox="type: video"
                  data-gallery="portfolioGallery"
-                 title="After Effects - CINEMATIC CBR 150R">
-                <i class="bx bx-video"></i>
+                 title="After Effects - CINEMATIC CBR 150R — 6-second preview">
+                <i class="bx bx-play-circle" aria-hidden="true"></i><span class="portfolio-action-label">6s Preview</span>
               </a>
             </div>
           </div>
@@ -688,11 +743,10 @@
 
   </div>
 </section>
-<!-- End Portfolio Section -->
     <!-- End Portfolio Section -->
 
     <!-- ======= Social Media Section ======= -->
-    <section id="services" class="services">
+    <section id="services" class="services section-blend section-blend--to-creator" data-nav-section>
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -708,9 +762,9 @@
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
                 </svg>
-                <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&utm_source=qr"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr" aria-label="Instagram Ahmad Farrel"><i class="bx bxl-instagram" aria-hidden="true"></i></a>
               </div>
-              <h4><a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&utm_source=qr">INSTAGRAM</a></h4>
+              <h3><a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr">INSTAGRAM</a></h3>
             </div>
           </div>
 
@@ -720,9 +774,9 @@
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
                 </svg>
-                <a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&sender_device=pc"><i class="bx bxl-tiktok"></i></a>
+                <a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&amp;sender_device=pc" aria-label="TikTok Ahmad Farrel"><i class="bx bxl-tiktok" aria-hidden="true"></i></a>
               </div>
-              <h4><a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&sender_device=pc">TIKTOK</a></h4>
+              <h3><a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&amp;sender_device=pc">TIKTOK</a></h3>
             </div>
           </div>
 
@@ -732,91 +786,160 @@
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
                 </svg>
-                <a href="https://wa.me/62895806707860"><i class="bx bxl-whatsapp"></i></a>
+                <a href="https://wa.me/" data-whatsapp-link aria-label="WhatsApp Ahmad Farrel"><i class="bx bxl-whatsapp" aria-hidden="true"></i></a>
               </div>
-              <h4><a href="https://wa.me/62895806707860">WhatsApp</a></h4>
+              <h3><a href="https://wa.me/" data-whatsapp-link>WhatsApp</a></h3>
             </div>
           </div>
 
+        </div>
+
+        <div class="project-brief-cta" data-aos="fade-up" data-aos-delay="120">
+          <div>
+            <span class="project-brief-cta__label">Open to collaboration</span>
+            <h3>Have a creative or web project in mind?</h3>
+            <p>Share a short brief, then continue the conversation directly on WhatsApp.</p>
+          </div>
+          <button type="button" class="project-brief-cta__button project-brief-trigger" aria-haspopup="dialog" aria-controls="project-brief-dialog" aria-expanded="false">
+            <span>Start a Project</span><i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+          </button>
         </div>
 
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Partners ======= -->
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container" data-aos="fade-up">
+    <!-- ======= Creator Profile ======= -->
+    <section id="creator-profile" class="creator-profile section-blend section-blend--to-footer" aria-labelledby="creator-profile-title" data-nav-section>
+      <div class="creator-profile__backdrop" aria-hidden="true"></div>
+      <div class="container">
+        <header class="creator-profile__heading" data-aos="fade-up">
+          <span>MADD</span>
+          <h2 id="creator-profile-title">BEHIND THE PORTFOLIO</h2>
+        </header>
 
-        <div class="section-title">
-          <h2>TEAM</h2>
-        </div>
+        <article class="creator-profile__card" data-aos="fade-up" data-aos-delay="80">
+          <figure class="creator-profile__portrait">
+            <img src="assets/media/images/creator-profile-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Portrait of Ahmad Farrel, also known as Madd">
+            <figcaption>MADD / CREATOR 001</figcaption>
+          </figure>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
+          <div class="creator-profile__content">
+            <span class="creator-profile__alias">Creative alias / Madd</span>
+            <h3>Ahmad Farrel Hamdan Sholichan</h3>
+            <p class="creator-profile__role">Travel Content Creator, Video Editor &amp; Web Developer</p>
+            <p class="creator-profile__description">I built and developed this website as my personal portfolio—designed to showcase my work and make collaboration easy.</p>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="aseet/fto parner/pp 4.png" class="testimonial-img" alt="">
-                <h2>Ahmad</h2>
-                <h3>Ahmad Farrel Hamdan Sholichan</h3>
-                <h4>Travel Content Creator &amp; Programmer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  I built and developed this website as my personal portfolio—designed to showcase my work and make collaboration easy.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
+            <div class="creator-profile__fields" aria-label="Creative fields">
+              <span>Video Editing</span><span>Cinematography</span><span>Photography</span><span>Travel Content</span><span>Motion Graphics</span><span>Web Development</span>
             </div>
 
-            <!-- End testimonial item -->
-
+            <div class="creator-profile__socials" aria-label="Madd social links">
+              <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr" aria-label="Instagram Madd"><i class="bx bxl-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+              <a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&amp;sender_device=pc" aria-label="TikTok Madd"><i class="bx bxl-tiktok" aria-hidden="true"></i><span>TikTok</span></a>
+              <a href="https://wa.me/" data-whatsapp-link aria-label="WhatsApp Ahmad Farrel"><i class="bx bxl-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
+        </article>
       </div>
-    </section>
-    <!-- End Partners -->
+    </section><!-- End Creator Profile -->
 
   </main><!-- End #main -->
+
+  <div id="project-brief-modal" class="project-brief" hidden>
+    <div class="project-brief__overlay" data-project-brief-close aria-hidden="true"></div>
+    <section id="project-brief-dialog" class="project-brief__dialog" role="dialog" aria-modal="true" aria-labelledby="project-brief-title" aria-describedby="project-brief-intro" tabindex="-1">
+      <div class="project-brief__accent" aria-hidden="true"></div>
+      <header class="project-brief__header">
+        <div>
+          <span class="project-brief__eyebrow">Project Brief / WhatsApp</span>
+          <h2 id="project-brief-title">Start a Project</h2>
+          <p id="project-brief-intro">Tell me the essentials. Your answers stay in this browser and are only placed into a WhatsApp message.</p>
+        </div>
+        <button type="button" class="project-brief__close" data-project-brief-close aria-label="Close project brief">
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <form id="project-brief-form" class="project-brief__form" novalidate>
+        <div class="project-brief__field" data-brief-field>
+          <label for="project-brief-name">Name <span aria-hidden="true">*</span></label>
+          <input id="project-brief-name" name="name" type="text" autocomplete="name" required aria-describedby="project-brief-name-error">
+          <span id="project-brief-name-error" class="project-brief__error" aria-live="polite"></span>
+        </div>
+
+        <div class="project-brief__field" data-brief-field>
+          <label for="project-brief-type">Project Type <span aria-hidden="true">*</span></label>
+          <select id="project-brief-type" name="projectType" required aria-describedby="project-brief-type-error">
+            <option value="">Choose a service</option>
+            <option value="Video Editing">Video Editing</option>
+            <option value="Videography">Videography</option>
+            <option value="Photography">Photography</option>
+            <option value="Motion Graphics / 3D Motion">Motion Graphics / 3D Motion</option>
+            <option value="Website / Web Development">Website / Web Development</option>
+            <option value="Travel Content">Travel Content</option>
+            <option value="Other">Other</option>
+          </select>
+          <span id="project-brief-type-error" class="project-brief__error" aria-live="polite"></span>
+        </div>
+
+        <div class="project-brief__field" data-brief-field>
+          <label for="project-brief-deadline">Deadline <span>(optional)</span></label>
+          <input id="project-brief-deadline" name="deadline" type="date" aria-describedby="project-brief-deadline-help">
+          <span id="project-brief-deadline-help" class="project-brief__help">Leave blank if it has not been decided.</span>
+        </div>
+
+        <div class="project-brief__field" data-brief-field>
+          <label for="project-brief-budget">Budget <span>(optional)</span></label>
+          <input id="project-brief-budget" name="budget" type="text" inputmode="text" autocomplete="off" aria-describedby="project-brief-budget-help">
+          <span id="project-brief-budget-help" class="project-brief__help">Use any format that is convenient for you.</span>
+        </div>
+
+        <div class="project-brief__field project-brief__field--wide" data-brief-field>
+          <label for="project-brief-description">Project Description <span aria-hidden="true">*</span></label>
+          <textarea id="project-brief-description" name="description" rows="5" required aria-describedby="project-brief-description-error"></textarea>
+          <span id="project-brief-description-error" class="project-brief__error" aria-live="polite"></span>
+        </div>
+
+        <div class="project-brief__footer project-brief__field--wide">
+          <p id="project-brief-status" class="project-brief__status" role="status" aria-live="polite"></p>
+          <button type="submit" class="project-brief__submit">
+            <i class="bx bxl-whatsapp" aria-hidden="true"></i><span>Continue to WhatsApp</span>
+          </button>
+        </div>
+      </form>
+    </section>
+  </div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>AHMAD FARREL</h3>
+      <h3>MADD.</h3>
       <p>EDITOR - CINEMATOGRAPHY - WEB DEVELOPMENT - TRAVEL CONTENT CREATOR</p>
       <div class="social-links">
-        <a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&sender_device=pc" class="twitter"><i class="bx bxl-tiktok"></i></a>
-        <a href="https://wa.me/62895806707860" class="facebook"><i class="bx bxl-whatsapp"></i></a>
-        <a href="https://www.instagram.com/madddd.?igsh=NHJpc2dwejVwOTMx" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&amp;sender_device=pc" class="twitter" aria-label="TikTok Ahmad Farrel"><i class="bx bxl-tiktok" aria-hidden="true"></i></a>
+        <a href="https://wa.me/" class="facebook" data-whatsapp-link aria-label="WhatsApp Ahmad Farrel"><i class="bx bxl-whatsapp" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr" class="instagram" aria-label="Instagram Ahmad Farrel"><i class="bx bxl-instagram" aria-hidden="true"></i></a>
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>Agen - Mad</span></strong>
+        &copy; Copyright <strong><span>MADD.</span></strong>
       </div>
       <div class="credits">
-        Designed by <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&utm_source=qr">AHMAD FARREL</a>
+        Designed and developed by <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr">Madd</a>
       </div>
     </div>
   </footer><!-- End Footer -->
 
-  <div id="preloader">
-  <div class="loader-count">1%</div>
-</div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/portfolio-enhancements.js?v=20260716-6"></script>
+  <script src="assets/js/main.js?v=20260716-6"></script>
 
 </body>
 

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
 
   <title>Madd — Creative Portfolio</title>
   <meta name="description" content="Ahmad Farrel — Travel Content Creator, Video Editor, Videographer, and Web Developer. Cinematic storytelling, clean edits, and professional visuals.">
@@ -36,7 +36,7 @@
 
   <!-- CSS -->
   <link href="assets/css/style.css?v=20260716-6" rel="stylesheet">
-  <link href="assets/css/portfolio-enhancements.css?v=20260716-6" rel="stylesheet">
+  <link href="assets/css/portfolio-enhancements.css?v=20260716-8" rel="stylesheet">
 
 </head>
 
@@ -51,7 +51,7 @@
     <span class="opening__corner opening__corner--bl" aria-hidden="true"></span>
     <span class="opening__corner opening__corner--br" aria-hidden="true"></span>
     <div class="opening__content">
-      <span class="opening__label">MADD / OPENING 001</span>
+      <span class="opening__label">Madd / OPENING 001</span>
       <p class="opening__name" aria-hidden="true"><span class="opening-word opening-word--first">AHMAD</span><span class="opening-word opening-word--second">FARREL</span></p>
       <p class="opening__subtitle">CREATIVE VISUAL PORTFOLIO</p>
       <span class="opening__line" aria-hidden="true"></span>
@@ -62,8 +62,8 @@
 
   <!-- ======= Cinematic navigation rail ======= -->
   <header id="header" class="madd-nav-rail" aria-label="Portfolio navigation">
-    <a class="madd-nav-rail__brand scrollto" href="#hero" aria-label="MADD — back to Home">
-      <span class="madd-nav-rail__brand-long">MADD.</span>
+    <a class="madd-nav-rail__brand scrollto" href="#hero" aria-label="Madd — back to Home">
+      <span class="madd-nav-rail__brand-long">Madd.</span>
       <span class="madd-nav-rail__brand-short" aria-hidden="true">M.</span>
     </a>
     <span class="madd-nav-rail__progress" aria-hidden="true"><span data-scroll-progress></span></span>
@@ -80,20 +80,49 @@
     </nav>
   </header><!-- End cinematic navigation rail -->
 
-  <nav class="madd-mobile-nav" aria-label="Mobile primary navigation">
-    <a href="#hero" class="scrollto active" data-mobile-nav-link data-nav-link aria-current="location"><i class="bx bx-home-alt" aria-hidden="true"></i><span>Home</span></a>
-    <a href="#about" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-user" aria-hidden="true"></i><span>About</span></a>
-    <a href="#portfolio" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-movie-play" aria-hidden="true"></i><span>Work</span></a>
-    <a href="#skills" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-grid-alt" aria-hidden="true"></i><span>Skills</span></a>
-    <button type="button" class="madd-mobile-nav__more" aria-label="More" aria-expanded="false" aria-controls="mobile-nav-more" data-mobile-more-toggle>
-      <i class="bx bx-dots-horizontal-rounded" aria-hidden="true"></i><span>More</span>
-    </button>
-    <div id="mobile-nav-more" class="madd-mobile-nav__panel" data-mobile-more-panel hidden>
-      <a href="#resume" class="scrollto" data-nav-link><i class="bx bx-file-blank" aria-hidden="true"></i><span>Resume</span></a>
-      <a href="#services" class="scrollto" data-nav-link><i class="bx bx-message-square-dots" aria-hidden="true"></i><span>Contact</span></a>
-      <a href="#creator-profile" class="scrollto" data-nav-link><i class="bx bx-user-pin" aria-hidden="true"></i><span>Creator</span></a>
-    </div>
-  </nav>
+  <button
+    type="button"
+    class="madd-mobile-nav-trigger"
+    aria-label="Open navigation, current section: Home"
+    aria-expanded="false"
+    aria-controls="madd-mobile-nav-drawer"
+    data-mobile-nav-trigger
+  >
+    <span class="madd-mobile-nav-trigger__brand" aria-hidden="true">M.</span>
+    <span class="madd-mobile-nav-trigger__icon" aria-hidden="true"><span></span><span></span></span>
+  </button>
+
+  <div class="madd-mobile-nav-shell" data-mobile-nav-shell hidden>
+    <div class="madd-mobile-nav-overlay" data-mobile-nav-close aria-hidden="true"></div>
+    <aside
+      id="madd-mobile-nav-drawer"
+      class="madd-mobile-nav-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="madd-mobile-nav-title"
+      tabindex="-1"
+    >
+      <header class="madd-mobile-nav-drawer__header">
+        <div>
+          <span class="madd-mobile-nav-drawer__eyebrow">Madd.</span>
+          <h2 id="madd-mobile-nav-title">Navigate the portfolio</h2>
+        </div>
+        <button type="button" class="madd-mobile-nav-drawer__close" aria-label="Close navigation" data-mobile-nav-close>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+      </header>
+      <nav class="madd-mobile-nav-drawer__nav" aria-label="Mobile primary navigation">
+        <a href="#hero" class="scrollto active" data-mobile-nav-link data-nav-link aria-current="location"><i class="bx bx-home-alt" aria-hidden="true"></i><span>Home</span><small aria-hidden="true">01</small></a>
+        <a href="#about" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-user" aria-hidden="true"></i><span>About</span><small aria-hidden="true">02</small></a>
+        <a href="#resume" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-file-blank" aria-hidden="true"></i><span>Resume</span><small aria-hidden="true">03</small></a>
+        <a href="#skills" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-grid-alt" aria-hidden="true"></i><span>Skills</span><small aria-hidden="true">04</small></a>
+        <a href="#portfolio" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-movie-play" aria-hidden="true"></i><span>Portfolio</span><small aria-hidden="true">05</small></a>
+        <a href="#creator-profile" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-user-pin" aria-hidden="true"></i><span>Behind the Portfolio</span><small aria-hidden="true">06</small></a>
+        <a href="#services" class="scrollto" data-mobile-nav-link data-nav-link><i class="bx bx-message-square-dots" aria-hidden="true"></i><span>Contact</span><small aria-hidden="true">07</small></a>
+      </nav>
+      <p class="madd-mobile-nav-drawer__foot">Creative visual portfolio / Ahmad Farrel</p>
+    </aside>
+  </div>
 
   <!-- ======= Hero ======= -->
   <section id="hero" class="hero-home section-blend section-blend--to-about d-flex flex-column justify-content-center" aria-labelledby="hero-title" data-nav-section>
@@ -102,12 +131,17 @@
 
     <div class="container hero-home__content-wrap">
       <div class="hero-home__content">
-        <span class="hero-home__eyebrow">MADD / CREATIVE PORTFOLIO</span>
+        <span class="hero-home__eyebrow">Madd / CREATIVE PORTFOLIO</span>
         <h1 id="hero-title" class="hero-home__name">
-          <span class="hero-home__name-primary" data-text="Ahmad Farrel">Ahmad Farrel</span>
+          <span class="hero-home__name-primary" data-text="Ahmad Farrel"><span class="hero-home__name-word">Ahmad</span> <span class="hero-home__name-word hero-home__name-word--last">Farrel</span></span>
           <span class="hero-home__name-secondary">Hamdan Sholichan</span>
         </h1>
         <p class="hero-home__profession">I’m a <span class="typed">Video Editor</span></p>
+
+        <a href="#about" class="hero-home__scroll-cue hero-home__scroll-cue--mobile scrollto" aria-label="Scroll to About Me">
+          <span aria-hidden="true"></span>
+          About
+        </a>
 
         <div class="social-links hero-home__socials" aria-label="Social media links">
           <a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&amp;sender_device=pc" class="twitter" aria-label="TikTok Ahmad Farrel"><i class="bx bxl-tiktok" aria-hidden="true"></i></a>
@@ -116,7 +150,7 @@
         </div>
       </div>
     </div>
-    <a href="#about" class="hero-home__scroll-cue scrollto" aria-label="Scroll to About Me">
+    <a href="#about" class="hero-home__scroll-cue hero-home__scroll-cue--desktop scrollto" aria-label="Scroll to About Me">
       <span aria-hidden="true"></span>
       About
     </a>
@@ -151,7 +185,7 @@
                   <source srcset="assets/media/images/about-profile-960.webp" type="image/webp">
                   <img src="aseet/Ranu pane.jpg" class="about-poster__image" width="540" height="960" loading="lazy" decoding="async" alt="Ahmad Farrel outdoors at Ranu Pane">
                 </picture>
-                <span class="about-poster__caption">MADD / CREATIVE PORTFOLIO</span>
+                <span class="about-poster__caption">Madd / CREATIVE PORTFOLIO</span>
               </div>
 
               <div class="about-floating-skills" data-about-reveal data-reveal-order="4" aria-label="Core skills">
@@ -385,7 +419,7 @@
     </section><!-- End Cinematic Career Journey -->
 
     <!-- ======= Portfolio Section ======= -->
-<section id="portfolio" class="portfolio section-bg section-blend section-blend--to-contact" aria-labelledby="portfolio-title" data-nav-section>
+<section id="portfolio" class="portfolio section-bg section-blend section-blend--to-connect" aria-labelledby="portfolio-title" data-nav-section>
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
@@ -745,52 +779,72 @@
 </section>
     <!-- End Portfolio Section -->
 
-    <!-- ======= Social Media Section ======= -->
-    <section id="services" class="services section-blend section-blend--to-creator" data-nav-section>
-      <div class="container" data-aos="fade-up">
+    <!-- ======= Connect with Madd Section ======= -->
+    <section id="services" class="services connect-section section-blend section-blend--to-creator" aria-labelledby="connect-title" data-nav-section>
+      <div class="container">
 
-        <div class="section-title">
-          <h2>SOCIAL MEDIA</h2>
-          <p>Here are some of my active social media accounts.</p>
-        </div>
+        <header class="connect-section__header" data-aos="fade-up">
+          <span class="connect-section__eyebrow">LET’S CONNECT</span>
+          <h2 id="connect-title">Find Madd Online</h2>
+          <p>Follow my creative work or contact me to discuss a project.</p>
+        </header>
 
-        <div class="center-medsos row">
+        <div class="connect-grid">
 
-          <div class="pad-ubah col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-blue">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
-                </svg>
-                <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr" aria-label="Instagram Ahmad Farrel"><i class="bx bxl-instagram" aria-hidden="true"></i></a>
-              </div>
-              <h3><a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr">INSTAGRAM</a></h3>
-            </div>
-          </div>
+          <a
+            class="connect-card connect-card--instagram"
+            href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Madd on Instagram, @_madddd._"
+            data-aos="fade-up"
+            data-aos-delay="70"
+          >
+            <span class="connect-card__icon" aria-hidden="true"><i class="bx bxl-instagram"></i></span>
+            <span class="connect-card__content">
+              <strong>Instagram</strong>
+              <span class="connect-card__action">@_madddd._</span>
+              <span class="connect-card__description">Follow my visual work.</span>
+            </span>
+            <i class="bx bx-up-arrow-alt connect-card__arrow" aria-hidden="true"></i>
+          </a>
 
-          <div class="pad-ubah col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-orange ">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
-                </svg>
-                <a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&amp;sender_device=pc" aria-label="TikTok Ahmad Farrel"><i class="bx bxl-tiktok" aria-hidden="true"></i></a>
-              </div>
-              <h3><a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&amp;sender_device=pc">TIKTOK</a></h3>
-            </div>
-          </div>
+          <a
+            class="connect-card connect-card--tiktok"
+            href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&amp;sender_device=pc"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Madd on TikTok, @madd._ahmad"
+            data-aos="fade-up"
+            data-aos-delay="140"
+          >
+            <span class="connect-card__icon" aria-hidden="true"><i class="bx bxl-tiktok"></i></span>
+            <span class="connect-card__content">
+              <strong>TikTok</strong>
+              <span class="connect-card__action">@madd._ahmad</span>
+              <span class="connect-card__description">Watch my creative content.</span>
+            </span>
+            <i class="bx bx-up-arrow-alt connect-card__arrow" aria-hidden="true"></i>
+          </a>
 
-          <div class="pad-ubah col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-pink">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
-                </svg>
-                <a href="https://wa.me/" data-whatsapp-link aria-label="WhatsApp Ahmad Farrel"><i class="bx bxl-whatsapp" aria-hidden="true"></i></a>
-              </div>
-              <h3><a href="https://wa.me/" data-whatsapp-link>WhatsApp</a></h3>
-            </div>
-          </div>
+          <a
+            class="connect-card connect-card--whatsapp"
+            href="https://wa.me/"
+            data-whatsapp-link
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Start a WhatsApp conversation with Ahmad Farrel"
+            data-aos="fade-up"
+            data-aos-delay="210"
+          >
+            <span class="connect-card__icon" aria-hidden="true"><i class="bx bxl-whatsapp"></i></span>
+            <span class="connect-card__content">
+              <strong>WhatsApp</strong>
+              <span class="connect-card__action">Start a conversation</span>
+              <span class="connect-card__description">Discuss a project.</span>
+            </span>
+            <i class="bx bx-up-arrow-alt connect-card__arrow" aria-hidden="true"></i>
+          </a>
 
         </div>
 
@@ -806,25 +860,25 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section><!-- End Connect with Madd Section -->
 
     <!-- ======= Creator Profile ======= -->
     <section id="creator-profile" class="creator-profile section-blend section-blend--to-footer" aria-labelledby="creator-profile-title" data-nav-section>
       <div class="creator-profile__backdrop" aria-hidden="true"></div>
       <div class="container">
         <header class="creator-profile__heading" data-aos="fade-up">
-          <span>MADD</span>
+          <span>Madd</span>
           <h2 id="creator-profile-title">BEHIND THE PORTFOLIO</h2>
         </header>
 
         <article class="creator-profile__card" data-aos="fade-up" data-aos-delay="80">
           <figure class="creator-profile__portrait">
             <img src="assets/media/images/creator-profile-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Portrait of Ahmad Farrel, also known as Madd">
-            <figcaption>MADD / CREATOR 001</figcaption>
+            <figcaption>Madd / CREATOR 001</figcaption>
           </figure>
 
           <div class="creator-profile__content">
-            <span class="creator-profile__alias">Creative alias / Madd</span>
+            <span class="creator-profile__alias">CREATIVE ALIAS / Madd</span>
             <h3>Ahmad Farrel Hamdan Sholichan</h3>
             <p class="creator-profile__role">Travel Content Creator, Video Editor &amp; Web Developer</p>
             <p class="creator-profile__description">I built and developed this website as my personal portfolio—designed to showcase my work and make collaboration easy.</p>
@@ -913,7 +967,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>MADD.</h3>
+      <h3>Madd.</h3>
       <p>EDITOR - CINEMATOGRAPHY - WEB DEVELOPMENT - TRAVEL CONTENT CREATOR</p>
       <div class="social-links">
         <a href="https://www.tiktok.com/@madd._ahmad?is_from_webapp=1&amp;sender_device=pc" class="twitter" aria-label="TikTok Ahmad Farrel"><i class="bx bxl-tiktok" aria-hidden="true"></i></a>
@@ -921,7 +975,7 @@
         <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr" class="instagram" aria-label="Instagram Ahmad Farrel"><i class="bx bxl-instagram" aria-hidden="true"></i></a>
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>MADD.</span></strong>
+        &copy; Copyright <strong><span>Madd.</span></strong>
       </div>
       <div class="credits">
         Designed and developed by <a href="https://www.instagram.com/_madddd._?igsh=NHJpc2dwejVwOTMx&amp;utm_source=qr">Madd</a>
@@ -938,7 +992,7 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/portfolio-enhancements.js?v=20260716-6"></script>
+  <script src="assets/js/portfolio-enhancements.js?v=20260716-8"></script>
   <script src="assets/js/main.js?v=20260716-6"></script>
 
 </body>

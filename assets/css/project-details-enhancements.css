@@ -297,6 +297,10 @@ body.project-detail-page::before {
   text-transform: uppercase;
 }
 
+.project-hero .project-eyebrow {
+  text-transform: none;
+}
+
 .project-eyebrow::before {
   width: 38px;
   height: 1px;

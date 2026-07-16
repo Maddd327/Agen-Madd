@@ -29,7 +29,7 @@
     opening: {
       name: ['AHMAD', 'FARREL'],
       subtitle: 'CREATIVE VISUAL PORTFOLIO',
-      label: 'MADD / OPENING 001'
+      label: 'Madd / OPENING 001'
     },
     professions: [
       'Video Editor',
@@ -439,37 +439,14 @@
     const links = Array.from(document.querySelectorAll('[data-nav-link][href^="#"]'));
     const progress = document.querySelector('[data-scroll-progress]');
     const rail = document.querySelector('.madd-nav-rail');
-    const moreToggle = document.querySelector('[data-mobile-more-toggle]');
-    const morePanel = document.querySelector('[data-mobile-more-panel]');
+    const mobileTrigger = document.querySelector('[data-mobile-nav-trigger]');
     if (!sections.length || !links.length) return;
 
     let frameId = 0;
-    let closeTimer = 0;
 
     const sectionIdFromLink = (link) => {
       const href = link.getAttribute('href') || '';
       return href.charAt(0) === '#' ? href.slice(1) : '';
-    };
-
-    const closeMore = (restoreFocus) => {
-      if (!moreToggle || !morePanel || morePanel.hidden) return;
-      window.clearTimeout(closeTimer);
-      moreToggle.setAttribute('aria-expanded', 'false');
-      morePanel.classList.remove('is-open');
-      closeTimer = window.setTimeout(() => {
-        morePanel.hidden = true;
-        if (restoreFocus) moreToggle.focus();
-      }, reducedMotion ? 0 : 180);
-    };
-
-    const openMore = () => {
-      if (!moreToggle || !morePanel) return;
-      window.clearTimeout(closeTimer);
-      morePanel.hidden = false;
-      moreToggle.setAttribute('aria-expanded', 'true');
-      requestFrame(() => morePanel.classList.add('is-open'));
-      const firstLink = morePanel.querySelector('a[href]');
-      if (firstLink) firstLink.focus();
     };
 
     const update = () => {
@@ -490,18 +467,12 @@
         else link.removeAttribute('aria-current');
       });
 
-      if (moreToggle && morePanel) {
-        const currentMoreLink = Array.from(morePanel.querySelectorAll('[data-nav-link]'))
-          .find((link) => sectionIdFromLink(link) === activeId);
-        const moreActive = Boolean(currentMoreLink);
-        moreToggle.classList.toggle('active', moreActive);
-        if (moreActive) {
-          moreToggle.setAttribute('aria-current', 'location');
-          moreToggle.setAttribute('aria-label', 'More, current section: ' + currentMoreLink.textContent.trim());
-        } else {
-          moreToggle.removeAttribute('aria-current');
-          moreToggle.setAttribute('aria-label', 'More');
-        }
+      if (mobileTrigger) {
+        const activeLink = links.find((link) => sectionIdFromLink(link) === activeId);
+        const activeLabel = activeLink ? activeLink.textContent.trim().replace(/\s*\d{2}\s*$/, '') : 'Home';
+        const action = mobileTrigger.getAttribute('aria-expanded') === 'true' ? 'Close' : 'Open';
+        mobileTrigger.dataset.currentSection = activeLabel;
+        mobileTrigger.setAttribute('aria-label', action + ' navigation, current section: ' + activeLabel);
       }
 
       if (progress && rail) {
@@ -514,40 +485,170 @@
       if (!frameId) frameId = requestFrame(update);
     };
 
-    const handleResize = () => {
-      if (morePanel && moreToggle && window.innerWidth >= 768 && !morePanel.hidden) {
-        const focusWasInPanel = morePanel.contains(document.activeElement);
-        closeMore(false);
-        if (focusWasInPanel) {
-          window.setTimeout(() => {
-            const currentRailLink = document.querySelector('.madd-nav-rail [aria-current="location"]');
-            if (currentRailLink) currentRailLink.focus();
-          }, reducedMotion ? 0 : 190);
-        }
-      }
-      requestUpdate();
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate, { passive: true });
+    window.addEventListener('load', requestUpdate, { once: true });
+    update();
+  };
+
+  const initMobileNavigation = () => {
+    const trigger = document.querySelector('[data-mobile-nav-trigger]');
+    const shell = document.querySelector('[data-mobile-nav-shell]');
+    const drawer = document.querySelector('.madd-mobile-nav-drawer');
+    if (!trigger || !shell || !drawer) return;
+
+    const closeControls = Array.from(shell.querySelectorAll('[data-mobile-nav-close]'));
+    const navLinks = Array.from(drawer.querySelectorAll('[data-mobile-nav-link]'));
+    const mobileMode = window.matchMedia(
+      '(max-width: 767.98px), (max-width: 900px) and (orientation: landscape) and (max-height: 600px)'
+    );
+    const focusableSelector = [
+      'a[href]',
+      'button:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])'
+    ].join(',');
+
+    let closeTimer = 0;
+    let inertState = [];
+
+    const syncMobileNavigationState = (open) => {
+      const currentSection = trigger.dataset.currentSection || 'Home';
+      trigger.setAttribute('aria-expanded', String(open));
+      trigger.setAttribute('aria-label', (open ? 'Close' : 'Open') + ' navigation, current section: ' + currentSection);
+      document.body.classList.toggle('mobile-drawer-open', open);
     };
 
-    window.addEventListener('scroll', requestUpdate, { passive: true });
-    window.addEventListener('resize', handleResize, { passive: true });
-    window.addEventListener('load', requestUpdate, { once: true });
-    links.forEach((link) => link.addEventListener('click', () => {
-      closeMore(Boolean(morePanel && morePanel.contains(link)));
-    }));
+    const setPageInert = (inert) => {
+      if (inert) {
+        inertState = Array.from(document.body.children)
+          .filter((element) => (
+            element !== shell &&
+            element !== trigger &&
+            element.tagName !== 'SCRIPT'
+          ))
+          .map((element) => ({ element: element, wasInert: Boolean(element.inert) }));
+        inertState.forEach((item) => {
+          item.element.inert = true;
+        });
+        return;
+      }
 
-    if (moreToggle && morePanel) {
-      moreToggle.addEventListener('click', () => {
-        if (morePanel.hidden) openMore();
-        else closeMore(false);
+      inertState.forEach((item) => {
+        item.element.inert = item.wasInert;
       });
-      document.addEventListener('pointerdown', (event) => {
-        if (!morePanel.hidden && !morePanel.contains(event.target) && !moreToggle.contains(event.target)) closeMore(false);
+      inertState = [];
+    };
+
+    const finishClose = (restoreFocus) => {
+      shell.hidden = true;
+      setPageInert(false);
+      if (restoreFocus && document.contains(trigger)) trigger.focus({ preventScroll: true });
+    };
+
+    const closeMobileNavigation = (restoreFocus, immediate) => {
+      if (shell.hidden) {
+        syncMobileNavigationState(false);
+        return;
+      }
+
+      window.clearTimeout(closeTimer);
+      shell.classList.remove('is-open');
+      syncMobileNavigationState(false);
+      if (immediate || reducedMotion) {
+        finishClose(Boolean(restoreFocus));
+        return;
+      }
+      closeTimer = window.setTimeout(() => finishClose(Boolean(restoreFocus)), 290);
+    };
+
+    const openMobileNavigation = () => {
+      if (!mobileMode.matches || document.body.classList.contains('project-brief-open')) return;
+
+      window.clearTimeout(closeTimer);
+      shell.hidden = false;
+      setPageInert(true);
+      syncMobileNavigationState(true);
+      drawer.focus({ preventScroll: true });
+      requestFrame(() => {
+        shell.classList.add('is-open');
+        const activeLink = drawer.querySelector('[aria-current="location"]') || navLinks[0];
+        if (activeLink && !shell.hidden) activeLink.focus({ preventScroll: true });
       });
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && !morePanel.hidden) closeMore(true);
-      });
+    };
+
+    trigger.addEventListener('click', () => {
+      if (shell.hidden) openMobileNavigation();
+      else closeMobileNavigation(true, false);
+    });
+
+    closeControls.forEach((control) => {
+      control.addEventListener('click', () => closeMobileNavigation(true, false));
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => closeMobileNavigation(true, false));
+    });
+
+    shell.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeMobileNavigation(true, false);
+        return;
+      }
+
+      if (event.key !== 'Tab') return;
+      const focusable = Array.from(drawer.querySelectorAll(focusableSelector))
+        .filter((element) => !element.hidden && element.getAttribute('aria-hidden') !== 'true');
+      if (!focusable.length) {
+        event.preventDefault();
+        drawer.focus();
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && (document.activeElement === first || document.activeElement === drawer)) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    const resetForViewport = () => {
+      if (!mobileMode.matches) closeMobileNavigation(false, true);
+    };
+
+    if (typeof mobileMode.addEventListener === 'function') {
+      mobileMode.addEventListener('change', resetForViewport);
+    } else if (typeof mobileMode.addListener === 'function') {
+      mobileMode.addListener(resetForViewport);
     }
-    update();
+
+    window.addEventListener('portfolio:project-brief-open', () => {
+      closeMobileNavigation(false, true);
+    });
+
+    if (!mobileMode.matches) finishClose(false);
+    else syncMobileNavigationState(false);
+  };
+
+  const initBackToTopCollisionHandling = () => {
+    const backToTop = document.querySelector('.back-to-top');
+    const connectTargets = Array.from(document.querySelectorAll('.connect-card, .connect-section .project-brief-cta'));
+    if (!backToTop || !connectTargets.length || !('IntersectionObserver' in window)) return;
+
+    const visibleTargets = new Set();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) visibleTargets.add(entry.target);
+        else visibleTargets.delete(entry.target);
+      });
+      document.body.classList.toggle('connect-actions-in-view', visibleTargets.size > 0);
+    }, { threshold: 0.04 });
+
+    connectTargets.forEach((target) => observer.observe(target));
   };
 
   const countForSource = (source) => {
@@ -1251,6 +1352,7 @@
 
     const openModal = (trigger) => {
       window.clearTimeout(closeTimer);
+      window.dispatchEvent(new CustomEvent('portfolio:project-brief-open'));
       lastTrigger = trigger;
       modal.hidden = false;
       document.body.classList.add('project-brief-open');
@@ -1417,6 +1519,8 @@
     initAnimationVisibility();
     initOpening();
     initNavigationRail();
+    initMobileNavigation();
+    initBackToTopCollisionHandling();
     initSkillsToolbox();
     initAboutReveal();
     initAboutDepth();
